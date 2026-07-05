@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import './globals.css'
 import { VT323 } from "next/font/google";
+// import { AuthProvider } from "./providers";
 
 const vt323 = VT323({
   weight: "400",
@@ -34,7 +35,11 @@ export default function RootLayout({
       lang="en"
       className={`${vt323.variable}  ${geistSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-background">
+
+          {children}
+
+      </body>
     </html>
   );
 }
